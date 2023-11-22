@@ -246,31 +246,31 @@ export default function page() {
 
   //TODO:pass the agent id and the new role to the function
 
-  async function updateAgentRole(agentId: string, newRole: string) {
-    try {
-      const response = await fetch("/api/updateAgentRole", {
-        method: "PUT", // Change to PUT
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ agentId, newRole }),
-      });
+  // async function updateAgentRole(agentId: string, newRole: string) {
+  //   try {
+  //     const response = await fetch("/api/updateAgentRole", {
+  //       method: "PUT", // Change to PUT
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify({ agentId, newRole }),
+  //     });
 
-      const data = await response.json();
+  //     const data = await response.json();
 
-      if (response.ok) {
-        console.log(data.message);
-        // Do something with the updated agent data if needed
-      } else {
-        console.error(data.message);
-      }
-    } catch (error) {
-      console.error("Error updating agent role:", error);
-    }
-  }
+  //     if (response.ok) {
+  //       console.log(data.message);
+  //       // Do something with the updated agent data if needed
+  //     } else {
+  //       console.error(data.message);
+  //     }
+  //   } catch (error) {
+  //     console.error("Error updating agent role:", error);
+  //   }
+  // }
 
   // Call the function with the agentId and newRole you want to update
-  updateAgentRole("agentId123", "newRoleValue");
+  // updateAgentRole("agentId123", "newRoleValue");
 
   return (
     <Card>
@@ -310,7 +310,7 @@ export default function page() {
                   <Chip
                     clickable
                     onClick={() => {
-                      updateAgentRole;
+                      // updateAgentRole;
                     }}
                     label={"Approve"}
                     color={"success"}
